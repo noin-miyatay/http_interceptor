@@ -174,7 +174,7 @@ class HttpClientWithInterceptor extends BaseClient {
       } else if (body is List) {
         request.bodyBytes = body.cast<int>();
       } else if (body is Map) {
-        request.bodyFields = body.cast<String, String>();
+        request.bodyFields = body.cast<String, dynamic>();
       } else {
         throw new ArgumentError('Invalid request body "$body".');
       }
